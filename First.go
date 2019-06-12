@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("Hello World")
 	var a = 10
-	fmt.Printf("value:%x,address:%x\n", a, &a)
+	fmt.Printf("value:%d,address:%x\n", a, &a)
 
 	// create Timer
 	timeDemo := time.NewTimer(time.Duration(1) * time.Second)
