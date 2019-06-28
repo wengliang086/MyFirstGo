@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/jinzhu/configor"
 	"time"
 )
 
@@ -19,4 +20,6 @@ func main() {
 	}
 
 	fmt.Println("a", "b", 11)
+
+	fmt.Println("aa:", configor.Config{})
 }
