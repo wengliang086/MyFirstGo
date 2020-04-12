@@ -1,8 +1,8 @@
 package main
 
 import (
+	test "GoLearnNotes/1grpc/pb"
 	"context"
-	test "goModTest/tests/1grpc/pb"
 	"google.golang.org/grpc"
 	"log"
 	"os"

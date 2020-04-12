@@ -1,11 +1,11 @@
 package main
 
 import (
+	test "GoLearnNotes/1grpc/pb"
 	"context"
 	"crypto/md5"
 	"flag"
 	"fmt"
-	test "goModTest/tests/1grpc/pb"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 	"log"

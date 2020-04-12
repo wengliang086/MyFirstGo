@@ -1,7 +1,7 @@
 package main
 
 import (
-	"MyFirstGo/example/pool"
+	"GoLearnNotes/example/pool"
 	"io"
 	"log"
 	"math/rand"
