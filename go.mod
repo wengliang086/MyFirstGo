@@ -10,5 +10,6 @@ require (
 	github.com/gogo/protobuf v1.2.1
 	github.com/golang/protobuf v1.3.2
 	github.com/jinzhu/configor v1.1.0
+	github.com/nsqio/go-nsq v1.0.8 // indirect
 	google.golang.org/grpc v1.22.1
 )
