@@ -5,12 +5,14 @@ import (
 	"github.com/nsqio/go-nsq"
 )
 
-type NewHandler struct{}
+type NewHandler struct {
+	channel string
+}
 
 func (m *NewHandler) HandleMessage(msg *nsq.Message) (err error) {
 	addr := msg.NSQDAddress
 	message := string(msg.Body)
-	fmt.Println(addr, message)
+	fmt.Println(addr, m.channel, message)
 	return
 }
 
@@ -22,7 +24,7 @@ func MyConsumers(topic, channel string) {
 		return
 	}
 	// 接收消息
-	handler := &NewHandler{}
+	handler := &NewHandler{channel: channel}
 	consumer.AddHandler(handler)
 	err = consumer.ConnectToNSQD(addr)
 	if err != nil {
@@ -33,8 +35,7 @@ func MyConsumers(topic, channel string) {
 var addr = "127.0.0.1:4150"
 
 func main() {
-	go MyConsumers("topic-demo1", "channel-aa")
 	// 模拟多个从多个channel去消息
-	go MyConsumers("topic-demo1", "channel-bb")
+	go MyConsumers("topic-demo1", "channel-dd")
 	select {}
 }
