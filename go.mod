@@ -11,7 +11,7 @@ require (
 	github.com/golang/protobuf v1.5.2
 	github.com/jinzhu/configor v1.1.0
 	github.com/nsqio/go-nsq v1.0.8
-	go.etcd.io/etcd/client/v3 v3.5.0-beta.3 // indirect
+	go.etcd.io/etcd/client/v3 v3.5.0-beta.3
 	golang.org/x/net v0.0.0-20201021035429-f5854403a974
 	golang.org/x/text v0.3.3
 	google.golang.org/grpc v1.37.0
